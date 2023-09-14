@@ -5,14 +5,6 @@
   <title>Mohsina pipeline</title>
 </head>
 <body>
-<script>
-  async function handleClick() {
-    let response = await fetch("https://015se4t346.execute-api.eu-west-2.amazonaws.com/mohsina-first-lambda");
-    let text = await response.text();
-    document.getElementById("response").innerHTML = text;
-    document.getElementById("img").src = 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9';
-  }
-</script>
   <div text-align="center">
     <br><br><br><br>
     <h1>Hello<span id="response"> folks! What happens when you click on the button below?Nothing as it is a test site</span></h1>
@@ -20,5 +12,13 @@
     <br><br>
     <img id="img" width="1000" height="1000" src="https://static.vecteezy.com/system/resources/previews/023/018/274/original/super-mario-world-game-elements-pixel-arcade-game-editorial-icons-free-vector.jpg" alt="image">
   </div>
+  <script>
+    async function handleClick() {
+      let response = await fetch("https://015se4t346.execute-api.eu-west-2.amazonaws.com/mohsina-first-lambda");
+      let text = await response.text();
+      document.getElementById("response").innerHTML = text;
+      document.getElementById("img").src = 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9';
+    }
+  </script>
 </body>
 </html>
